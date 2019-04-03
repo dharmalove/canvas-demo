@@ -9,14 +9,60 @@ listenToUser(yyy)
 var eraserEnabled = false
 eraser.onclick = function() {
     eraserEnabled =true
-    actions.className = 'actions x'
+    eraser.classList.add('active')
+    pen.classList.remove('active')
 
 }
-brush.onclick = function(){
+pen.onclick = function(){
     eraserEnabled = false
-    actions.className = 'actions'
+    pen.classList.add('active')
+    eraser.classList.remove('active')
+
 }
 
+black.onclick = function(){
+    context.fillStyle = '#000000'
+    context.strokeStyle = '#000000'
+    black.classList.add('active')
+    black.previousSibling().classList.remove('active')
+}
+
+green.onclick = function(){
+    context.fillStyle = '#00FF00'
+    context.strokeStyle = '#00FF00'
+    green.classList.add('active')
+    green.previousSibling().classList.remove('active')
+}
+blue.onclick = function(){
+    context.fillStyle = '#0066FF'
+    context.strokeStyle = '#0066FF'
+    blue.classList.add('active')
+    blue.previousSibling().classList.remove('active')
+}
+orange.onclick = function(){
+    context.fillStyle = '#FF5511'
+    context.strokeStyle = '#FF5511'
+    orange.classList.add('active')
+    orange.previousSibling().classList.remove('active')
+}
+red.onclick = function(){
+    context.fillStyle = '#FF0000'
+    context.strokeStyle = '#FF0000'
+    red.classList.add('active')
+    red.previousSibling().classList.remove('active')
+}
+yellow.onclick = function(){
+    context.fillStyle = '#FFFF00'
+    context.strokeStyle = '#FFFF00'
+    yellow.classList.add('active')
+    yellow.previousSibling().classList.remove('active')
+}
+purple.onclick = function(){
+    context.fillStyle = '#9900FF'
+    context.strokeStyle = '#9900FF'
+    purple.classList.add('active')
+    purple.previousSibling().classList.remove('active')
+}
 
 /******/
 
@@ -38,14 +84,12 @@ function autoSetCanvasSize(canvas) {
 
 function drawCircle(x, y, radius) {
     context.beginPath()
-    context.fillStyle = 'black'
     context.arc(x, y, radius, 0, Math.PI * 2);
     context.fill()
 }
 
 function drawLine(x1, y1, x2, y2) {
     context.beginPath();
-    context.strokeStyle = 'black'
     context.moveTo(x1, y1) // 起点
     context.lineWidth = 5
     context.lineTo(x2, y2) // 终点
