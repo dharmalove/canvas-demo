@@ -9,24 +9,30 @@
 <body>
     <canvas id="xxx" width=300 height=300></canvas>
     <div id=actions class="actions">
-        <svg id="eraser" class="icon">
-            <use xlink:href="#icon-eraser"></use>
-        </svg>
-        <svg id="pen" class="icon active">
-            <use xlink:href="#icon-pen"></use>
-        </svg>
-        <ol id="colors">
+        <div class="icons">
+            <svg id="eraser" class="icon">
+                <use xlink:href="#icon-eraser"></use>
+            </svg>
+            <svg id="pen" class="icon active">
+                <use xlink:href="#icon-pen"></use>
+            </svg>
+        </div>
+        <ol class="colors">
             <li id="black" class="active"></li>
             <li id="green"></li>
             <li id="blue"></li>
             <li id="orange"></li>
             <li id="red"></li>
-            <li id="yellow"></li>
             <li id="purple"></li>
         </ol>
+        <ol class="size">
+            <li id="thin" class="thin"></li>
+            <li id="thick" class="thick"></li>
+        </ol>
+        <p id="clear" class="clear">清除</p>
+        <p id="save" class="save">保存</p>
     </div>
 </body>
 <script src="./main.js"></script>
-<script src="https://cdn.bootcss.com/jquery/3.3.1/core.js"></script>
 <script src="//at.alicdn.com/t/font_1124740_juh8f818yrs.js"></script>
 </html>

@@ -1,5 +1,6 @@
 *{margin: 0;padding: 0;}
 ul,li{list-style: none;}
+body{overflow: hidden}
 .icon {
     width: 1em; height: 1em;
     vertical-align: -0.15em;
@@ -17,15 +18,19 @@ ul,li{list-style: none;}
     top: 0;
     left: 0;
 }
-.actions > svg{
-    padding: 6px 4px;
+.actions .icons{
+    display: inline-block;
+    vertical-align: top;
+}
+.actions .icons > svg{
+    padding: 4px 4px;
     width: 1.5em;
     height: 1.5em;
     fill: gray;
     transition: all 0.3s;
     vertical-align: top;
 }
-.actions > svg.active{
+.actions .icons > svg.active{
     fill: #000000;
     transform: scale(1.2);
 }
@@ -37,15 +42,45 @@ ul,li{list-style: none;}
     vertical-align: top;
     padding: 6px 4px;
 }
-.actions > ol > li{
-    width: 1em;
-    height: 1em;
+.actions .colors > li{
+    width: 0.8em;
+    height: 0.8em;
     margin: 0 4px;
     border-radius: 50%;
+    transition: all 0.3s;
 }
-.actions > ol > li.active{
-    border: 1px solid black;
+.actions .colors > li.active{
     transform: scale(1.2);
+}
+.actions .size > li{
+    margin: 0 4px 0 0;
+    cursor: pointer;
+}
+.actions .size .thin{
+    width: 1em;
+    height: 4px;
+    background: #000000;
+    border-radius: 4px;
+}
+.actions .size .thick{
+     width: 1em;
+     height: 8px;
+     background: #000000;
+     border-radius: 4px;
+ }
+.actions > p{
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 4px 4px;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.actions .clear{
+    background: #DB5637;
+}
+.actions .save{
+    background: #5C87A7;
 }
 #black{background: #000000;}
 #green{background: #00FF00;}

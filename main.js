@@ -24,46 +24,55 @@ black.onclick = function(){
     context.fillStyle = '#000000'
     context.strokeStyle = '#000000'
     black.classList.add('active')
-    black.previousSibling().classList.remove('active')
 }
 
 green.onclick = function(){
     context.fillStyle = '#00FF00'
     context.strokeStyle = '#00FF00'
     green.classList.add('active')
-    green.previousSibling().classList.remove('active')
 }
 blue.onclick = function(){
     context.fillStyle = '#0066FF'
     context.strokeStyle = '#0066FF'
     blue.classList.add('active')
-    blue.previousSibling().classList.remove('active')
 }
 orange.onclick = function(){
     context.fillStyle = '#FF5511'
     context.strokeStyle = '#FF5511'
     orange.classList.add('active')
-    orange.previousSibling().classList.remove('active')
 }
 red.onclick = function(){
     context.fillStyle = '#FF0000'
     context.strokeStyle = '#FF0000'
     red.classList.add('active')
-    red.previousSibling().classList.remove('active')
-}
-yellow.onclick = function(){
-    context.fillStyle = '#FFFF00'
-    context.strokeStyle = '#FFFF00'
-    yellow.classList.add('active')
-    yellow.previousSibling().classList.remove('active')
 }
 purple.onclick = function(){
     context.fillStyle = '#9900FF'
     context.strokeStyle = '#9900FF'
     purple.classList.add('active')
-    purple.previousSibling().classList.remove('active')
 }
 
+thin.onclick = function(){
+    context.lineWidth = 4
+}
+
+thick.onclick = function(){
+    context.lineWidth = 8
+}
+
+clear.onclick = function(){
+    context.clearRect( 0, 0, yyy.width, yyy.height)
+}
+
+save.onclick = function(){
+    var url = yyy.toDataURL("image/png")
+    var a = document.createElement('a')
+    document.body.appendChild(a)
+    a.href = url
+    a.download = "我的图画"
+    a.target = '_blank'
+    a.click()
+}
 /******/
 
 function autoSetCanvasSize(canvas) {
@@ -91,7 +100,7 @@ function drawCircle(x, y, radius) {
 function drawLine(x1, y1, x2, y2) {
     context.beginPath();
     context.moveTo(x1, y1) // 起点
-    context.lineWidth = 5
+    context.lineWidth = this.lineWidth
     context.lineTo(x2, y2) // 终点
     context.stroke()
     context.closePath()
