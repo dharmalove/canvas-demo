@@ -23,6 +23,7 @@ ul,li{list-style: none;}
     height: 1.5em;
     fill: gray;
     transition: all 0.3s;
+    vertical-align: top;
 }
 .actions > svg.active{
     fill: #000000;
