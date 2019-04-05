@@ -10,6 +10,9 @@ body{overflow: hidden}
 #xxx{
     background: #cfcfcf;
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 .actions{
     width: 100%;
